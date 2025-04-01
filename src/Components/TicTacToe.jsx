@@ -52,6 +52,10 @@ const checkWin = () => {
   else if (data[2] === data[4] && data[4] === data[6] && data[6] !== "") {
     won(data[6]);
   }
+   else if (!data.includes("")) {
+      tittleRef.current.innerHTML = "It's a Draw!";
+      setLock(true);
+  }
 }
 
 const won = (winner) => {
